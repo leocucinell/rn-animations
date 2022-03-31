@@ -10,6 +10,12 @@ const Home = ({ navigation }) => {
                     navigation.navigate('Square')
                 }}
             />
+            <Button
+                title="Shake on tap"
+                onPress={() => {
+                    navigation.navigate('Shake')
+                }}
+            />
         </View>
     );
 }

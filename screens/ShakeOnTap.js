@@ -1,25 +1,19 @@
 import {StyleSheet, View, TouchableOpacity, Animated} from "react-native"
 import { useRef } from "react";
+import { transform } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
-const SpinOnTap = () => {
+const ShakeOnTap = () => {
 
-    const twirlAnim = useRef(new Animated.Value(0)).current
+    const position = useRef(new Animated.Value(0)).current
 
     return(
         <View style={styles.container}>
             <TouchableOpacity
                 onPress={() => {
-                    Animated.sequence([
-                        //Spin the square forward
-                        Animated.spring(twirlAnim, {
-                            toValue: 360,
-                            useNativeDriver: true
-                        })
-                        //Spin the square back
-                    ]).start();
+                    Animated.spring(position, {})
                 }}
             >
-                <View style={styles.square} ></View>
+                <Animated.View style={styles.square} ></Animated.View>
             </TouchableOpacity>
         </View>
     );
@@ -38,4 +32,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SpinOnTap;
+export default ShakeOnTap;

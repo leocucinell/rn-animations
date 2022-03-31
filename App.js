@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './screens/Home';
 import SquareToCircle from './screens/SquareToCircle';
+import SpinOnTap from './screens/SpinOnTap';
+import ShakeOnTap from './screens/ShakeOnTap';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -13,6 +15,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Square" component={SquareToCircle} />
+        <Stack.Screen name="Spin" component={SpinOnTap} />
+        <Stack.Screen name="Shake" component={ShakeOnTap} />
       </Stack.Navigator>
     </NavigationContainer>
   );
